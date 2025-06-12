@@ -52,7 +52,7 @@ public class CartService {
             //create new cart item
             CartItem cartItem = new CartItem();
             cartItem.setUser(user);
-            cartItem.setProductId(Long.valueOf(request.getProductId()));
+            cartItem.setProduct(request.getProductId());
             cartItem.setQuantity(request.getQuantity());
             cartItem.setPrice(product.getPrice().multiply(BigDecimal.valueOf(request.getQuantity())));
             cartItemRepository.save(cartItem);
